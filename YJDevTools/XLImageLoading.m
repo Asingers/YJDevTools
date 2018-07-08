@@ -7,7 +7,7 @@
 //
 
 #import "XLImageLoading.h"
-
+#import "Utility.h"
 @interface XLImageLoading ()
 {
     UILabel *_loadingLabel;
