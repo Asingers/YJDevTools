@@ -91,7 +91,7 @@
 -(void)buildAlertView:(NSString*)message
 {
     CGFloat alertHeignt = 70.0f;
-    CGFloat alertWidth = ScreenW-40;
+    CGFloat alertWidth = [[UIScreen mainScreen] bounds].size.width-40;
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, alertWidth, alertHeignt)];
     view.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.5];
