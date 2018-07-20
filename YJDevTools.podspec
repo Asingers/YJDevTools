@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YJDevTools"
-  s.version      = "0.0.3"
+  s.version      = "0.0.1"
   s.summary      = "YJDevTools."
 
   # This description is used to generate tags and improve search results.
