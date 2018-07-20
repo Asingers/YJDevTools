@@ -10,8 +10,6 @@
 @interface YJLocationManger ()<CLLocationManagerDelegate>
 
 @property (nonatomic,copy) UpdateLocatonEndBlock updateLocatonEndBlock;
-
-
 @end
 @implementation YJLocationManger{
     CLLocationManager *_locationManager;
