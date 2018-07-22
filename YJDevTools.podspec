@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YJDevTools"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "YJDevTools."
 
   # This description is used to generate tags and improve search results.
@@ -131,7 +131,7 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency 'AFNetworking', '~> 3.2.1'
+  s.dependency 'AFNetworking'
   s.dependency "MJExtension"
 
 end
