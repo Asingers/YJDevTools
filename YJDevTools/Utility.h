@@ -19,7 +19,7 @@
 #define ISIPHONE5 (ScreenH==(568)? (YES):(NO))
 #define ISIPHONE6 (ScreenH==(667)? (YES):(NO))
 #define ISIPHONE6P (ScreenH==(736)? (YES):(NO))
-#define ISIPHONEX (ScreenH==(812)? (YES):(NO))
+#define ISIPHONEX (ScreenH >=(812) && ScreenH <=(896)? (YES):(NO))
 
 //iphoneX的 安全区适配
 #define NavHeight (ISIPHONEX? (88):(64))
