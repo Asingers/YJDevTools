@@ -7,7 +7,11 @@
 //
 #import "Utility.h"
 #import "HTTPClient.h"
+#import "AFNetworking.h"
 #import "MJExtension.h"
+@interface HTTPClient()
+@property (nonatomic,strong) AFHTTPSessionManager *session;
+@end
 @implementation HTTPClient
 /**
  *  初始化请求参数

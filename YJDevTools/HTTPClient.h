@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
 
 @interface HTTPClient : NSObject
-@property (nonatomic,strong) AFHTTPSessionManager *session;
 @property (nonatomic,strong) NSMutableDictionary *requestDic;
 @property (nonatomic,strong) NSString *baseUrl;
 -(void)requestDataAndCallBack:(void(^)(id data, NSString *errorMessage))callback
