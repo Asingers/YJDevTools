@@ -19,14 +19,7 @@
 #define ISIPHONE5 (ScreenH==(568)? (YES):(NO))
 #define ISIPHONE6 (ScreenH==(667)? (YES):(NO))
 #define ISIPHONE6P (ScreenH==(736)? (YES):(NO))
-
-    // 判断是否为iPhone X 系列  这样写消除了在Xcode10上的警告。
-#define ISIPHONEX \
-({BOOL isPhoneX = NO;\
-if (@available(iOS 11.0, *)) {\
-isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
-}\
-(isPhoneX);})
+#define ISIPHONEX ([[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > (0.0)? (YES):(NO))
 
 //iphoneX的 安全区适配
 #define NavHeight (ISIPHONEX? (88):(64))
