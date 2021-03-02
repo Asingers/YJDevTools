@@ -134,5 +134,6 @@ Pod::Spec.new do |s|
   s.dependency "AFNetworking"
   s.dependency "MJExtension"
   s.dependency "Masonry"
+  s.dependency "MBProgressHUD"
 
 end
