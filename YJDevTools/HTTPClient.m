@@ -59,7 +59,8 @@
     self.session = [AFHTTPSessionManager manager];
     self.session.requestSerializer.timeoutInterval = 30;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [self.session GET:self.baseUrl parameters:self.requestDic progress:^(NSProgress * _Nonnull downloadProgress) {
+    
+    [self.session GET:self.baseUrl parameters:self.requestDic headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         callback(responseObject,@"");
@@ -81,7 +82,7 @@
     self.session = [AFHTTPSessionManager manager];
     self.session.requestSerializer.timeoutInterval = 30;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    [self.session POST:self.baseUrl parameters:self.requestDic progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.session POST:self.baseUrl parameters:self.requestDic headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         callback(responseObject,@"");
@@ -103,7 +104,7 @@
     self.session.requestSerializer.timeoutInterval = 30;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    [self.session DELETE:self.baseUrl parameters:self.requestDic success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.session DELETE:self.baseUrl parameters:self.requestDic headers:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         callback(responseObject,@"");
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
@@ -125,7 +126,7 @@
     self.session.requestSerializer.timeoutInterval = 30;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
-    [self.session GET:self.baseUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.session GET:self.baseUrl parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         callback(responseObject,@"");
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
